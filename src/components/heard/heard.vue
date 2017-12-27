@@ -3,6 +3,7 @@
       <el-row>
           <el-col :span="24">
               <div class="grid-content bg-purple-dark">
+                
                   <el-menu
                     :default-active="activeIndex"
                     class="el-menu-demo"
@@ -11,24 +12,29 @@
                     :background-color="color"
                     text-color="#fff"
                     active-text-color="#93e0ff">
-                    <el-menu-item index="1">处理中心</el-menu-item>
-                    <el-submenu index="2">
-                        <template slot="title">我的工作台</template>
-                        <el-menu-item index="2-1">选项1</el-menu-item>
-                        <el-menu-item index="2-2">选项2</el-menu-item>
-                        <el-menu-item index="2-3">选项3</el-menu-item>
+                    <a href="javascript:;"><img src="../../assets/logo.png" alt="logo" srcset="" height="60" class="logo"></a>
+                    <el-submenu index="1" class="state-user">
+                        <template slot="title">{{username}}</template>
+                        <el-menu-item index="1-1">个人资料</el-menu-item>
+                        <el-menu-item index="1-2">退出</el-menu-item>
                     </el-submenu>
-                    <el-menu-item index="3">订单管理</el-menu-item>
                     </el-menu>
               </div>
-                <el-radio v-model="radio" label="1">备选项</el-radio>
-  <el-radio v-model="radio" label="2">备选项</el-radio>
           </el-col>
       </el-row>
   </div>
 </template>
-<style lang="scss" scoped>
-
+<style  scoped>
+.logo{
+  vertical-align: middle;
+  float: left;
+}
+.state-user{
+  float: right;
+}
+.el-submenu .el-menu-item{
+  min-width: auto;
+}
 </style>
 <script>
 export default {
@@ -38,7 +44,7 @@ export default {
       activeIndex: "1",
       istrue: true,
       color: "#222",
-      radio:"1",
+      username:'超级管理员'
     };
   },
   methods: {
