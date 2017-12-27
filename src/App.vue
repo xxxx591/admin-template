@@ -3,10 +3,10 @@
     <heard-tab></heard-tab>
     <el-row>
       <el-col :span="3">
-    <left-tab></left-tab>
+        <left-tab></left-tab>
       </el-col>
       <el-col :span="21">
-    <router-view/>
+        <router-view></router-view>
       </el-col>
     </el-row>
   </div>

@@ -12,7 +12,7 @@
                     :background-color="color"
                     text-color="#fff"
                     active-text-color="#93e0ff">
-                    <a href="javascript:;"><img src="../../assets/logo.png" alt="logo" srcset="" height="60" class="logo"></a>
+                    <router-link to="/"><img src="../../assets/logo.png" alt="logo" srcset="" height="60" class="logo"></router-link>
                     <el-submenu index="1" class="state-user">
                         <template slot="title">{{username}}</template>
                         <el-menu-item index="1-1">个人资料</el-menu-item>
@@ -34,6 +34,9 @@
 }
 .el-submenu .el-menu-item{
   min-width: auto;
+}
+.el-menu--horizontal{
+  border: 0;
 }
 </style>
 <script>
