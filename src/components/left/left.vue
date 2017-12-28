@@ -58,7 +58,16 @@
                         <span>Navigation</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item v-for="(item,key) in noticeLict" :key="key" :index="item.path">{{item.title}}</el-menu-item>
+                        <el-menu-item v-for="(item,key) in navigationList" :key="key" :index="item.path">{{item.title}}</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+                <el-submenu index="6">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>Others</span>
+                    </template>
+                    <el-menu-item-group>
+                        <el-menu-item v-for="(item,key) in othersList" :key="key" :index="item.path">{{item.title}}</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
                 </el-menu>
@@ -124,6 +133,14 @@ export default {
           {path:'/Navigation/breadcrumb',title:'Breadcrumb 面包屑'},
           {path:'/Navigation/dropdown',title:'Dropdown 下拉菜单'},
           {path:'/Navigation/steps',title:'Steps 步骤条'},
+        ],
+        othersList:[
+          {path:'/Others/dialog',title:'Dialog 对话框'},
+          {path:'/Others/tooltip',title:'Tooltip 文字提示'},
+          {path:'/Others/popover',title:'Popover 弹出框'},
+          {path:'/Others/card',title:'Card 卡片'},
+          {path:'/Others/carousel',title:'Carousel 走马灯'},
+          {path:'/Others/collapse',title:'Collapse 折叠面板'},
         ]
     };
   },
