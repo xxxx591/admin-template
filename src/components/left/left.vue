@@ -31,7 +31,7 @@
                         <span>Form</span>
                     </template>
                     <el-menu-item-group>
-                        <el-menu-item v-for="(item,key) in formList" :key="key" :index="key.toString()">{{item}}</el-menu-item>
+                        <el-menu-item v-for="(item,key) in formList" :key="key" :index="item.path">{{item.title}}</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
                 </el-menu>
@@ -44,6 +44,12 @@
   min-width: auto;
   text-align: left;
 }
+.el-submenu__title,.el-menu-item-group,.el-menu-item-group__title{
+  min-width: 180px;
+}
+.el-menu-item-group__title{
+  padding: 0;
+}
 </style>
 <script>
 export default {
@@ -53,22 +59,22 @@ export default {
       msg: "大家好",
       onlyOpen: true,
       formList: [
-        "Radio 单选框",
-        "Checkbox 多选框",
-        "Input 输入框",
-        "InputNumber 计数器",
-        "Select 选择器",
-        "Cascader 级联选择器",
-        "Switch 开关",
-        "Slider 滑块",
-        "TimePicker 时间选择器",
-        "DatePicker 日期选择器",
-        "DateTimePicker 日期时间选择器",
-        "Upload 上传",
-        "Rate 评分",
-        "ColorPicker 颜色选择器",
-        "Transfer 穿梭框",
-        "Form 表单"
+        { path:'/Form/radio',title:'Radio 单选框'},
+        { path:'/Form/checkbox',title:'Checkbox 多选框'},
+        { path:'/Form/input',title:'Input 输入框'},
+        { path:'/Form/inputnumber',title:'InputNumber 计数器'},
+        { path:'/Form/select',title:'Select 选择器'},
+        { path:'/Form/cascader',title:'Cascader 级联选择器'},
+        { path:'/Form/switch',title:'Switch 开关'},
+        { path:'/Form/slider',title:'Slider 滑块'},
+        { path:'/Form/timepicker',title:'TimePicker 时间选择器'},
+        { path:'/Form/datepicker',title:'DatePicker 日期选择器'},
+        { path:'/Form/datetmepicker',title:'DateTimePicker 日期时间选择器'},
+        { path:'/Form/upload',title:'Upload 上传'},
+        { path:'/Form/rate',title:'Rate 评分'},
+        { path:'/Form/colorpicker',title:'ColorPicker 颜色选择器'},
+        { path:'/Form/transfer',title:'Transfer 穿梭框'},
+        { path:'/Form/form',title:'Form 表单'},
       ]
     };
   },
