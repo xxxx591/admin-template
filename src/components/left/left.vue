@@ -34,6 +34,24 @@
                         <el-menu-item v-for="(item,key) in formList" :key="key" :index="item.path">{{item.title}}</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
+                <el-submenu index="3">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>Data</span>
+                    </template>
+                    <el-menu-item-group>
+                        <el-menu-item v-for="(item,key) in dataList" :key="key" :index="item.path">{{item.title}}</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
+                <el-submenu index="4">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>Notice</span>
+                    </template>
+                    <el-menu-item-group>
+                        <el-menu-item v-for="(item,key) in noticeLict" :key="key" :index="item.path">{{item.title}}</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
                 </el-menu>
             </el-col>
         </el-row>
@@ -75,7 +93,22 @@ export default {
         { path:'/Form/colorpickerr',title:'ColorPicker 颜色选择器'},
         { path:'/Form/transferr',title:'Transfer 穿梭框'},
         { path:'/Form/formm',title:'Form 表单'},
-      ]
+      ],
+      dataList:[
+        { path:'/Data/table',title:'Table 表格'},
+        { path:'/Data/tag',title:'Tag 标签'},
+        { path:'/Data/progress',title:'Progress 进度条'},
+        { path:'/Data/tree',title:'Tree 树形控件'},
+        { path:'/Data/pagination',title:'Pagination 分页'},
+        { path:'/Data/badge',title:'Badge 标记'},
+        ],
+      noticeLict:[
+        { path:'/Notice/alert',title:'Alert 警告'},
+        { path:'/Notice/loading',title:'Loading 加载'},
+        { path:'/Notice/message',title:'Message 消息提示'},
+        { path:'/Notice/messagebox',title:'MessageBox 弹框'},
+        { path:'/Notice/notification',title:'Notification 通知'},
+        ],
     };
   },
   methods: {
