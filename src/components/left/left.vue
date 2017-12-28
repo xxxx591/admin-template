@@ -52,6 +52,15 @@
                         <el-menu-item v-for="(item,key) in noticeLict" :key="key" :index="item.path">{{item.title}}</el-menu-item>
                     </el-menu-item-group>
                 </el-submenu>
+                <el-submenu index="5">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span>Navigation</span>
+                    </template>
+                    <el-menu-item-group>
+                        <el-menu-item v-for="(item,key) in noticeLict" :key="key" :index="item.path">{{item.title}}</el-menu-item>
+                    </el-menu-item-group>
+                </el-submenu>
                 </el-menu>
             </el-col>
         </el-row>
@@ -109,6 +118,13 @@ export default {
         { path:'/Notice/messagebox',title:'MessageBox 弹框'},
         { path:'/Notice/notification',title:'Notification 通知'},
         ],
+        navigationList:[
+          {path:'/Navigation/navmenu',title:'NavMenu 导航菜单'},
+          {path:'/Navigation/tabs',title:'Tabs 标签页'},
+          {path:'/Navigation/breadcrumb',title:'Breadcrumb 面包屑'},
+          {path:'/Navigation/dropdown',title:'Dropdown 下拉菜单'},
+          {path:'/Navigation/steps',title:'Steps 步骤条'},
+        ]
     };
   },
   methods: {
