@@ -27,7 +27,7 @@
                 </el-submenu>
                 <el-submenu index="2">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i class="el-icon-upload"></i>
                         <span>Form</span>
                     </template>
                     <el-menu-item-group>
@@ -36,7 +36,7 @@
                 </el-submenu>
                 <el-submenu index="3">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i class="el-icon-date"></i>
                         <span>Data</span>
                     </template>
                     <el-menu-item-group>
@@ -45,7 +45,7 @@
                 </el-submenu>
                 <el-submenu index="4">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i class="el-icon-info"></i>
                         <span>Notice</span>
                     </template>
                     <el-menu-item-group>
@@ -54,7 +54,7 @@
                 </el-submenu>
                 <el-submenu index="5">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i class="el-icon-menu"></i>
                         <span>Navigation</span>
                     </template>
                     <el-menu-item-group>
@@ -63,7 +63,7 @@
                 </el-submenu>
                 <el-submenu index="6">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i class="el-icon-more"></i>
                         <span>Others</span>
                     </template>
                     <el-menu-item-group>
